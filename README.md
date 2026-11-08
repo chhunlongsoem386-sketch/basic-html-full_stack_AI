@@ -11,8 +11,26 @@ A beginner-friendly Expense Tracker dashboard built with HTML5 and Tailwind CSS 
 
 ## Practice 2
 
-The **Add an expense** form is in `index.html`, directly below the **Monthly Summary** cards. It is intentionally minimally styled for Practice 2.
+## Features
 
-For the exercise, change only the Tailwind class attributes inside that form. The summary cards already use `border-2 border-black`, which is the visual treatment your form will match later.
+- Monthly Summary: Balance, Income, and Expenses
+- Styled Add an expense form
+- Recent Transactions table
+- Responsive design for desktop and mobile
+- Horizontal table scrolling on small screens
 
-This static project has no backend or saved data. The sample transactions are display-only.
+## Technologies Used
+
+- HTML5
+- Tailwind CSS v4 Play CDN
+- Git and GitHub
+
+## Project Status
+
+This is a static learning project.
+The expense form does not save data yet.
+Transactions are sample data only.
+
+## GitHub Repository
+
+https://github.com/chhunlongsoem386-sketch/basic-html-full_stack_AI
