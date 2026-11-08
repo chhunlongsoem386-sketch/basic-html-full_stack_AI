@@ -9,8 +9,6 @@ A beginner-friendly Expense Tracker dashboard built with HTML5 and Tailwind CSS 
 3. Choose **Open with Live Server**.
 4. Keep an internet connection so the Tailwind Play CDN can load.
 
-## Practice 2
-
 ## Features
 
 - Monthly Summary: Balance, Income, and Expenses
