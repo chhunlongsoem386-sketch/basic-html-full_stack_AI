@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple Expense Tracker dashboard for learning HTML and Tailwind CSS.">
+    <title>Expense Tracker</title>
+    <!-- Tailwind CSS v4 Play CDN: suitable for learning and development. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-slate-100 font-sans text-slate-900">
+    <header class="border-b-2 border-black bg-white">
+        <div class="mx-auto flex max-w-6xl flex-col items-start gap-2 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+            <h1 class="text-2xl font-bold tracking-tight">Expense Tracker</h1>
+            <p class="text-sm text-slate-600">Your money at a glance</p>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6 py-10">
+        <!-- Summary cards use the same strong border planned for the Practice 2 form. -->
+        <section aria-labelledby="summary-heading">
+            <h2 id="summary-heading" class="mb-4 text-lg font-semibold">Monthly Summary</h2>
+            <div class="grid gap-5 md:grid-cols-3">
+                <article class="border-2 border-black bg-white p-5">
+                    <p class="text-sm font-medium text-slate-600">Total Balance</p>
+                    <p class="mt-3 text-3xl font-bold">$2,450.00</p>
+                </article>
+                <article class="border-2 border-black bg-white p-5">
+                    <p class="text-sm font-medium text-slate-600">Income</p>
+                    <p class="mt-3 text-3xl font-bold text-emerald-700">$3,200.00</p>
+                </article>
+                <article class="border-2 border-black bg-white p-5">
+                    <p class="text-sm font-medium text-slate-600">Expenses</p>
+                    <p class="mt-3 text-3xl font-bold text-rose-700">$750.00</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)]">
+            <section class="min-w-0" aria-labelledby="expense-form-heading">
+                <h2 id="expense-form-heading" class="mb-4 text-lg font-semibold">Add an expense</h2>
+
+                <!-- Practice 2 starts here: this form intentionally has minimal styling. -->
+                <form class="space-y-5 border-2 border-black bg-white p-5" action="#" method="post">
+                    <div>
+                        <label for="amount" class="mb-2 block text-sm font-semibold">Amount</label>
+                        <input id="amount" name="amount" type="number" min="0" step="0.01" placeholder="0.00" required class="block w-full border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black">
+                    </div>
+
+                    <div>
+                        <label for="category" class="mb-2 block text-sm font-semibold">Category</label>
+                        <select id="category" name="category" required class="block w-full border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black">
+                            <option value="">Select a category</option>
+                            <option>Food</option>
+                            <option>Transport</option>
+                            <option>Shopping</option>
+                            <option>Utilities</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="date" class="mb-2 block text-sm font-semibold">Date</label>
+                        <input id="date" name="date" type="date" required class="block w-full border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black">
+                    </div>
+
+                    <div>
+                        <label for="description" class="mb-2 block text-sm font-semibold">Description</label>
+                        <input id="description" name="description" type="text" placeholder="What was this expense for?" required class="block w-full border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black">
+                    </div>
+
+                    <button type="submit" class="w-full border-2 border-black bg-black px-4 py-3 text-sm font-semibold text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">Add Expense</button>
+                </form>
+            </section>
+
+            <section class="min-w-0" aria-labelledby="transactions-heading">
+                <div class="mb-4 flex items-center justify-between">
+                    <h2 id="transactions-heading" class="text-lg font-semibold">Recent Transactions</h2>
+                    <span class="text-sm text-slate-600">This month</span>
+                </div>
+
+                <div class="overflow-x-auto border-2 border-black bg-white">
+                    <table class="w-full min-w-[520px] border-collapse text-left text-sm">
+                        <thead class="border-b-2 border-black bg-slate-200">
+                            <tr>
+                                <th class="px-4 py-3 font-semibold">Description</th>
+                                <th class="px-4 py-3 font-semibold">Category</th>
+                                <th class="px-4 py-3 font-semibold">Date</th>
+                                <th class="px-4 py-3 text-right font-semibold">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-300">
+                                <td class="px-4 py-3">Grocery shopping</td>
+                                <td class="px-4 py-3">Food</td>
+                                <td class="px-4 py-3">May 18</td>
+                                <td class="px-4 py-3 text-right font-medium text-rose-700">-$86.50</td>
+                            </tr>
+                            <tr class="border-b border-slate-300">
+                                <td class="px-4 py-3">Bus pass</td>
+                                <td class="px-4 py-3">Transport</td>
+                                <td class="px-4 py-3">May 15</td>
+                                <td class="px-4 py-3 text-right font-medium text-rose-700">-$40.00</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Freelance project</td>
+                                <td class="px-4 py-3">Income</td>
+                                <td class="px-4 py-3">May 10</td>
+                                <td class="px-4 py-3 text-right font-medium text-emerald-700">+$400.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
